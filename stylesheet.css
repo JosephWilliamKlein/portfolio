@@ -1,0 +1,804 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* WEBSITE STYLE */
+html {
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+    font-size: medium;
+    text-align: left;
+    color: #394F5E;
+    background-color: gainsboro;
+	max-width: 1532px;
+	margin: 0 auto;
+}
+
+h1 {
+    font: bold 2em Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+    color: #B94531;
+    text-shadow: .05em .05em .1em gray;
+}
+
+h2 {
+    font: bold 1.2em Constantia, "Lucida Bright", "DejaVu Serif", Georgia, "serif";
+    text-transform: uppercase;
+    color: #B94531;
+    letter-spacing: .3em;
+}
+dt {
+    font-weight: bold;
+    color: #394F5E;
+}
+
+button {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: medium;
+    text-align: center;
+	color: white;
+	background-color: #3D5CA6;
+	margin: 20px;
+	padding: 20px 40px 20px 40px;
+}
+
+button a {
+	color: white;
+	padding: 60px 40px;
+	text-decoration: none;
+}
+
+/* NAV STYLE */
+.main_nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	list-style: none;
+	background-color: #3D5CA6;
+	padding: .3em;
+	margin: 0;
+}
+
+.main_nav a {
+	color: white;
+	padding: 60px 40px;
+	text-decoration: none;
+}
+
+.main_nav a:hover {
+	background-color: white;
+	color: rgb(57, 79, 94);
+}
+
+li.logo {
+	margin-right: auto;
+}
+
+/* HERO IMAGE/HEADER */
+.hero_image {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6)), url("images/26_jklein_onset.jpg");
+	height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero_header {
+	text-align: left;
+    position: absolute;
+    color: white;
+    top: 40%;
+    text-shadow: .05em .05em .1em black;
+    font-size: 3em;
+    margin: 20px;
+}
+
+/* INDEX GRID STYLE */
+#container_01 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas:
+		'services selling_point about';
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#services {
+	grid-area: services;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#selling_point {
+	grid-area: selling_point;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#about {
+	grid-area: about;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+/* WIP GRID STYLE */
+#container_03 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto;
+	grid-template-areas:
+		'wip wip'
+		'tfd john_show';
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#wip {
+	grid-area: wip;
+	object-fit: cover;
+	margin: 20px;
+	align-items: center;
+	align-content: center;
+}
+
+#tfd {
+	grid-area: tfd;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#john_show {
+	grid-area: john_show;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+/* CONTACT GRID STYLE */
+#container_04 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas: 
+		'contact contact contact'
+		'photo video graphic'
+		'disclaimer disclaimer disclaimer'
+		'form form form';
+	background-color: white;
+	padding: 20px;
+}
+
+#contact {
+	grid-area: contact;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#photo {
+	grid-area: photo;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#video {
+	grid-area: video;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#graphic {
+	grid-area: graphic;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#disclaimer {
+	grid-area: disclaimer;
+	object-fit: cover;
+	margin: 20px;
+}
+
+#form {
+	grid-area: form;
+	object-fit: cover;
+	margin: 20px;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: medium;
+    text-align: center;
+}
+
+/* PORTFOLIO GRID STYLE */
+#container_02 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		'page_design image_comp video_prod';
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#page_design {
+	grid-area: page_design;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#image_comp {
+	grid-area: image_comp;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#video_prod {
+	grid-area: video_prod;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+/* PAGE DESIGN STYLE */
+#container_05 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto auto;
+	grid-template-areas:
+		'pd_header pd_header'
+		'book trifold'
+		'menu01 flyer'
+		'app app';
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#pd_header {
+	grid-area: pd_header;
+	object-fit: cover;
+	margin: 20px;
+	align-items: center;
+	align-content: center;
+}
+
+#book {
+	grid-area: book;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#trifold {
+	grid-area: trifold;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#menu01 {
+	grid-area: menu01;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#flyer {
+	grid-area: flyer;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#app {
+	grid-area: app;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+/* IMAGE COMP STYLE */
+#container_06 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		'lake tdi'
+		'otherworks otherworks'
+		'pieces pieces';
+	background-color: white;
+	padding-left: 20px;
+	padding-top: 10px;
+	padding-right: 20px;
+	padding-bottom: 20px;
+}
+
+#lake {
+	grid-area: lake;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#tdi {
+	grid-area: tdi;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#otherworks {
+	grid-area: otherworks;
+	object-fit: cover;
+	margin-top: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-bottom: 0;
+	align-items: center;
+	align-content: center;
+}
+
+#pieces {
+	grid-area: pieces;
+	object-fit: cover;
+	margin: 10px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    justify-content: center;
+}
+
+.tdi01:hover {
+    transform: scale(1.05);
+}
+
+.tdi02:hover {
+    transform: scale(1.05);
+}
+
+.tdi03:hover {
+    transform: scale(1.05);
+}
+
+.tdi04:hover {
+    transform: scale(1.05);
+}
+
+.tdi05:hover {
+    transform: scale(1.05);
+}
+
+.tdi06:hover {
+    transform: scale(1.05);
+}
+
+
+/* VIDEO PROD STYLE */
+#container_07 {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		'bos spotlight';
+	background-color: white;
+	padding: 20px;
+}
+
+#bos {
+	grid-area: bos;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+#spotlight {
+	grid-area: spotlight;
+	object-fit: cover;
+	margin: 20px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+}
+
+/* FOOTER STYLE */
+footer {
+    background-color: #3D5CA6;
+    color: rgb(255, 248, 233);
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+
+/* IMAGES STYLE */
+img {
+    max-width: 100%;
+}
+
+video {
+	max-width: 100%;
+}
+
+iframe {
+	max-width: 100%;
+}
+
+/*
+MEDIA QUERIES NAV BAR
+@media screen and (min-width: 600px) {
+	nav ul li {
+		flex: none;
+	}
+	nav ul {
+		justify-content: center;
+	}
+}
+*/
+
+/* MEDIA QUERIES INDEX PAGE */
+@media screen and (max-width: 1024px) {
+	#container_01 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas:
+			'services selling_point'
+			'about about';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_01 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			'services'
+			'selling_point'
+			'about';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+/* MEDIA QUERIES PORTFOLIO PAGE */
+@media screen and (max-width: 1200px) {
+	#container_02 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+			'page_design image_comp'
+			'video_prod video_prod';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	#container_02 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas: 
+			'page_design'
+			'image_comp'
+			'video_prod';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+/* MEDIA QUERIES WIP PAGE */
+@media screen and (max-width: 1024px) {
+	#container_03 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			'wip wip'
+			'tfd tfd'
+			'john_show john_show';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_03 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		grid-template-areas:
+			'wip'
+			'tfd'
+			'john_show';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+/* MEDIA QUERIES CONTACT PAGE */
+@media screen and (max-width: 1024px) {
+	#container_04 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas: 
+			'contact contact'
+			'photo video'
+			'graphic graphic'
+			'disclaimer disclaimer'
+			'form form';
+		background-color: white;
+		padding: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_04 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto;
+		grid-template-areas: 
+			'contact'
+			'photo'
+			'video'
+			'graphic'
+			'disclaimer'
+			'form';
+		background-color: white;
+		padding: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+/* MEDIA QUERIES PAGE DESIGN PAGE */
+@media screen and (max-width: 1024px) {
+	#container_05 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto auto auto;
+		grid-template-areas:
+			'pd_header pd_header'
+			'book book'
+			'trifold trifold'
+			'menu01 menu01'
+			'flyer flyer'
+			'app app';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_05 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto auto auto;
+		grid-template-areas:
+			'pd_header'
+			'book'
+			'trifold'
+			'menu01'
+			'flyer'
+			'app';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+/* MEDIA QUERIES IMAGE COMP PAGE */
+@media screen and (max-width: 1024px) {
+	#container_06 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			'lake lake'
+			'tdi tdi'
+			'otherworks otherworks'
+			'pieces pieces';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+	
+	#pieces {
+	grid-area: pieces;
+	object-fit: cover;
+	margin: 10px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    justify-content: center;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_06 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			'lake'
+			'tdi'
+			'otherworks'
+			'pieces';
+		background-color: white;
+		padding-left: 20px;
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+	
+	#pieces {
+		grid-area: pieces;
+	object-fit: cover;
+	margin: 10px;
+	padding: 2em;
+	background-color: #F2F2F2;
+	box-shadow: 6px 6px 6px 6px gray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-content: center;
+	}
+}
+
+/* MEDIA QUERIES VIDEO PROD PAGE */
+@media screen and (max-width: 1024px) {
+	#container_07 {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: auto auto;
+		grid-template-areas: 
+			'bos bos'
+			'spotlight spotlight';
+		background-color: white;
+		padding: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	#container_07 {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			'bos'
+			'spotlight';
+		background-color: white;
+		padding: 20px;
+		max-width: 1300px;
+		margin: 0 auto;
+	}
+}
